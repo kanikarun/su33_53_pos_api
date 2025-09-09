@@ -1,0 +1,50 @@
+Database structure
++ branch
+ -id(pk)
+ -name(varchar)*
+ -phone(varchar)*
+ -address(varchar)
+ -description(varchar)
+
++ customer
+ - id(pk)
+ - username
+ - email(varchar)*
+ - password(varchar)*
+ - remark(varchar)
++ user
+ - id(pk)
+ - username
+ - email(varchar)*
+ - password(varchar)*
+ - remark(varchar)
++ category
+ - id(pk)
+ - name(varchar)*
++ product
+ - id(pk)
+ - name(varchar)*
+ - cateogry_id(fk)*
+ - cost(decimal)*
+ - price(decimal)*
+ - image(varchar)
+ - stock(decimal)* - 0
+ - description(varchar)
++ customer_cart
+ - id(pk)
+ - customer_id(fk)*
+ - product_id(fk)*
+ - qty(int)*
++ order
+ - id(pk)
+ - user_id(fk)*
+ - customer_id(fk)*
+ - date_time(datatime)*
+ - status(pending, ...)
++ order_item 
+ - id(pk)
+ - order_id(fk)*
+ - product_id(fk)*
+ - price(int)*
+ - qty(int)*
+ - total(decimal)*
