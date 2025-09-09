@@ -1,3 +1,4 @@
+```
 Database structure
 + branch
  -id(pk)
@@ -48,3 +49,5 @@ Database structure
  - price(int)*
  - qty(int)*
  - total(decimal)*
+
+ ```
